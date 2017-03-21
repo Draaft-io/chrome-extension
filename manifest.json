@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Draaft Bookmarker",
+    "version": "0.1.0",
+
+    "description": "Save selected text to draaft.co",
+
+    "author": "Tony Findeisen",
+
+    "permissions": ["contextMenus"],
+
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+
+    "icons": {
+        "16":  "icon/16.png",
+        "48": "icon/48.png",
+        "128": "icon/128.png"
+    }
+}
