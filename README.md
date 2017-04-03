@@ -4,7 +4,11 @@ transfer the selected text including the current url of the page to
 
 # Installation
 
-* Fork the project or [download as zip](https://github.com/it-ony/draaft-chrome-extension/archive/master.zip)
+* From the chrome web store: https://chrome.google.com/webstore/detail/draaft-bookmarker/bdppmhlaopccijpfcnmbmnjgapmcldbm
+
+# Development
+
+* Fork the project or [download as zip](https://github.com/draaft-io/chrome-extension/archive/master.zip)
 * [unzip]
 * open [chrome extension page](chrome://extensions/)
 * click on load unpacked extension ([more details here](https://developer.chrome.com/extensions/getstarted#unpacked))
