@@ -3,6 +3,6 @@ chrome.contextMenus.create({
     contexts: ["selection"],
 
     onclick: function(info, tab) {
-        window.open('http://alpha.draaft.co/imports/element?quote=' + encodeURIComponent(info.selectionText || '') + '&url=' + encodeURIComponent(info.pageUrl));
+        window.open('http://alpha.draaft.co/bookmark?quote=' + encodeURIComponent(info.selectionText || '') + '&url=' + encodeURIComponent(info.pageUrl));
     }
 });
