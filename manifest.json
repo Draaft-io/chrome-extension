@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Draaft Bookmarker",
-    "version": "0.1.2",
+    "version": "0.2.0",
 
     "description": "Save selected text to draaft.co",
 
@@ -14,6 +14,22 @@
             "background.js"
         ]
     },
+
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js": [
+                "lib/content.js"
+            ],
+            "css": [
+                "lib/style.css"
+            ],
+            "run_at": "document_end"
+        }
+    ],
 
     "icons": {
         "16":  "icon/16.png",
