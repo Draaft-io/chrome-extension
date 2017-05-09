@@ -1,7 +1,10 @@
 .draaft-selection {
-    background: #00C2FF;
-    color: white;
     position: relative;
+}
+
+.draaft-selection::selection,
+.draaft-selection ::selection{
+    background-color: #00C2FF;
 }
 
 .draaft-icon {
@@ -10,10 +13,10 @@
 
 .draaft-selection .draaft-icon {
     position: absolute;
-    right: 0;
-    top: 100%;
     width: 16px;
     height: 16px;
+    left: -26px;
+    top: 100%;
     box-sizing: content-box;
     display: block;
     border: 5px solid #00C2FF;
