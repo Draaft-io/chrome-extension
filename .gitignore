@@ -1,4 +1,12 @@
-*.iml
+# IDE
 .idea
+*.iml
+
+# NODE
+node_modules
+.npm
+
+tmp/
+
 *.zip
 *.afdesign

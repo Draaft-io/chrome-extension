@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Draaft Bookmarklet</title>
+    <style>
+        body {
+            background: #f9f9f9;
+            margin: 0 auto;
+            max-width: 50vw;
+        }
+
+        p {
+            background: #333333;
+            padding: 1em;
+            color: white;
+        }
+
+        a {
+            background: #3376A4;
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: 1em;
+            margin-right: 1em;
+            border-radius: .5em;
+
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <a title="Draaft activate" href="javascript:(function(){var s = document.createElement('script'); s.type = 'text/javascript'; s.src = 'https://draaft-io.github.io/chrome-extension/dist/draaft-bookmark.min.js'; document.getElementsByTagName('head')[0].appendChild(s);})();">Draaft bookmark</a>
+        Drag this button to the bookmarks bar.
+    </p>
+
+    <small>
+        Click on the bookmark when you want to enable the draaft functionality for the
+        current opened web page
+    </small>
+</body>
+</html>

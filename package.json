@@ -1,0 +1,25 @@
+{
+    "name": "draft-bookmarklet",
+    "version": "0.1.1",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/draaft-io/chrome-extension.git"
+    },
+    "author": "Tony Findeisen",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/draaft-io/chrome-extension/issues"
+    },
+    "homepage": "https://draaft-io.github.io/chrome-extension/",
+    "devDependencies": {
+        "grunt": "^1.0.1",
+        "grunt-contrib-cssmin": "^2.0.0",
+        "grunt-contrib-uglify": "^2.2.1",
+        "load-grunt-tasks": "^3.5.2"
+    }
+}
