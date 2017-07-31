@@ -1,0 +1,47 @@
+{
+  "extends": ["airbnb-standard"],
+  "rules": {
+    "array-bracket-spacing": [2, "always", { objectsInArrays: false }],
+    "comma-dangle": [ 1, "always-multiline"],
+    "consistent-return": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/prefer-default-export": 0,
+    "import/no-unresolved": 0,
+    "import/extensions": 0,
+    "jsx-a11y/href-no-hash": 0,
+    "max-len": [ 1, 250 ],
+    "no-underscore-dangle": 0,
+    "quotes": [2, "double"],
+    "react/jsx-filename-extension": 0,
+    "semi": ["error", "never"],
+    "space-before-function-paren": [2, { anonymous: "always", named: "never" }],
+    "standard/array-bracket-even-spacing": 0
+  },
+  settings: {
+    "import/resolver": {
+      node: {
+        extensions: [".js", ".jsx", ".json"]
+      }
+    },
+    react: {
+      pragma: "React",
+      version: "0.14"
+    },
+  },
+  "globals": {
+    // define your apps globals here
+    "describe": false,
+    "it": false,
+    // Packages
+    "$": false,
+    "React": false,
+    "Promise": false,
+    "OnClickOutside": false,
+    "moment": false,
+    "Redux": false,
+    "System": false,
+    "fetch": false,
+    "chrome": false,
+    "webpack": false
+  }
+}

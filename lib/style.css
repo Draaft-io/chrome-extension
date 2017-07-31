@@ -82,8 +82,8 @@
     border: 0 none;
     transition: opacity 1s;
     opacity: 0;
-    width: 500px;
-    height: 640px;
+    width: 780px;
+    height: 722px;
     max-height: 80vh;
     max-width: 80vw;
 }
