@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import { compose } from "ramda"
 import React from "react"
-import { List } from "semantic-ui-react"
+import { List, Header, Segment, Divider } from "semantic-ui-react"
 import LogoutForm from "./LogoutForm"
 import { removeElementMutation } from "../graphql/mutation_remove_component"
 import { URL } from "../config"
@@ -27,22 +27,29 @@ class History extends React.Component {
 
   render() {
     return (
-      <List divided>
-        <List.Item>SAVE HISTORY</List.Item>
-        {this.props.user.components.map(component => (
-          <List.Item key={component._id}>
-            <List.Content floated="left">
-              <List.Header>{component.title}</List.Header>
-              <List.Description>{component.documents.length > 0 ? component.documents[0].title : "Not assigned yet"}</List.Description>
-            </List.Content>
-            <List.Content floated="right">
-              <List.Icon link name="trash" onClick={this.handleDeleteClick.bind(this, component._id)} verticalAlign="middle" />
-              <List.Icon link name="linkify" onClick={() => handleLinkClick(component)} verticalAlign="middle" />
-            </List.Content>
-          </List.Item>
-          ))}
-        <LogoutForm />
-      </List>
+      <div className="flex">
+        <Header className="logo-header"><img src="../../images/draaft_logo_light.svg"/></Header>
+        <Segment style={{ paddingBottom: "0" }}>
+          <Header as="h2" textAlign="center">SAVE HISTORY</Header>
+          <List divided>
+            {this.props.user.components.map(component => (
+              <List.Item className="action-item" key={component._id}>
+                <List.Content>
+                  <List.Header>{component.title}</List.Header>
+                  <List.Description>{component.documents.length > 0 ? component.documents[0].title : "Not assigned yet"}</List.Description>
+                </List.Content>
+                <List.Content className="actions">
+                  <List.Icon link name="linkify" onClick={() => handleLinkClick(component)} />
+                  <List.Icon link name="trash" onClick={this.handleDeleteClick.bind(this, component._id)} />
+                </List.Content>
+              </List.Item>
+              ))}
+          </List>
+        </Segment>
+        <Segment textAlign="center" style={{ paddingBottom: "1.5rem" }}>
+          <LogoutForm />
+        </Segment>
+      </div>
     )
   }
 }

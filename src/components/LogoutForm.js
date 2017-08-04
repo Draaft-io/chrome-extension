@@ -17,7 +17,7 @@ const LogoutForm = () => {
     })
   }
   return (
-    <p onClick={handleClick}>Logout</p>
+    <p onClick={handleClick} className="primary btn">Logout</p>
   )
 }
 
