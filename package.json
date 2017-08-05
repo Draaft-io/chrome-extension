@@ -6,7 +6,7 @@
     "scripts": {
         "start": "webpack --watch --config webpack.config.dev.js",
         "build": "cross-env NODE_ENV=production webpack -p --config webpack.config.prod.js",
-        "bundle": "yarn run build && zip -r dist/draaft.zip manifest.json background.js icon lib/style.css src/index.html dist/bundle.js src/themes src/styles"
+        "bundle": "yarn run build && zip -r dist/draaft.zip manifest.json images/draaft_logo_light.svg background.js icon lib/style.css src/index.html dist/bundle.js src/themes src/styles"
     },
     "repository": "git+https://github.com/draaft-io/chrome-extension.git",
     "author": "Tony Findeisen",
