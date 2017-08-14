@@ -1,17 +1,16 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import { ApolloProvider, gql, graphql  } from 'react-apollo'
+import { ApolloProvider } from "react-apollo"
 import client from "./graphql"
-import { Container } from "semantic-ui-react"
 import App from "./components/App"
 
 const Index = () => (
   <ApolloProvider client={client}>
-    <App/>
+    <App />
   </ApolloProvider>
 )
 
 ReactDOM.render(
-  <Index/>,
+  <Index />,
   document.getElementById("root")
-);
+)
