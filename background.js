@@ -1,5 +1,4 @@
 // Code inserted into the visited page
-console.log("1")
 const code = (quote, href, type) => [
   `quote = "${encodeURIComponent(quote)}" || "";`,
   `type = "${type}" || '';`,
