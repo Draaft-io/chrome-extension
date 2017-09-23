@@ -34,7 +34,7 @@ export default class LoginForm extends React.Component {
   render() {
     return (
       <div>
-        <Header className="logo-header"><img src="../../images/draaft_logo_light.svg"/></Header>
+        <Header className="logo-header"><img src="../../images/draaft_logo_light.svg" /></Header>
         <Segment>
           <Form id="login-form" onSubmit={this.handleSubmit.bind(this)}>
             <Form.Field>
@@ -46,7 +46,7 @@ export default class LoginForm extends React.Component {
             <Form.Input type="submit" style={{ display: "none" }} />
           </Form>
         </Segment>
-        <Divider/>
+        <Divider />
         <Segment textAlign="center" style={{ paddingBottom: "1.5rem" }}>
           <p className="dark">ALREADY LOGGED IN?</p>
           <p className="light">Try to enable third party cookies in your browser settings</p>

@@ -1,6 +1,15 @@
 // Code inserted into the visited page
 const code = (quote, href, type) => [
-  `quote = "${encodeURIComponent(quote)}" || "";`,
+  "var selection = window.getSelection()",
+  "var range = selection.getRangeAt(0)",
+  "var allWithinRangeParent = range.commonAncestorContainer.getElementsByTagName('*')",
+  "var allSelected = []",
+  "var nodes = []",
+  "for (let i = 0, el; el = allWithinRangeParent[i]; i += 1) { if (selection.containsNode(el, true)) { allSelected.push(el) } }",
+  "for (var el of allSelected) { let test = false; for (var el2 of allSelected) { if (el2.contains(el) && el !== el2) { test = true } }; if (!test) nodes.push(el) }",
+  "var html = nodes.map(node => node.outerHTML).join('')",
+  "console.log(html)",
+  "quote = encodeURIComponent(html) || '';",
   `type = "${type}" || '';`,
   `href = "${encodeURIComponent(href)}" || location.href;`,
   "overlay = document.createElement('div');",
@@ -40,3 +49,33 @@ chrome.contextMenus.create({
     chrome.browserAction.enable()
   },
 })
+
+// function getSelectedNodes() {
+//   const selection = window.getSelection()
+//   const range = selection.getRangeAt(0)
+//   const allWithinRangeParent = range.commonAncestorContainer.getElementsByTagName("*")
+//
+//   const allSelected = []
+//   const nodes = []
+//   for (let i = 0, el; el = allWithinRangeParent[i]; i += 1) {
+//     // The second parameter says to include the element
+//     // even if it's not fully selected
+//     if (selection.containsNode(el, true)) {
+//       allSelected.push(el)
+//     }
+//   }
+//
+//   // Only keep parent elements
+//   for (const el of allSelected) {
+//     let test = false
+//     for (const el2 of allSelected) {
+//       if (el2.contains(el) && el !== el2) {
+//         test = true
+//       }
+//     }
+//     if (!test) nodes.push(el)
+//   }
+//
+//   const html = nodes.map(node => node.outerHTML).join("")
+//   return html
+// }
