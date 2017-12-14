@@ -1,0 +1,11 @@
+{
+    "env": {
+        "compiler": "none",
+        "tester": "none"
+    },
+    "dependencies": {},
+    "packageDependencies": {
+        "prop-types": "^15.5.8",
+        "react": "^16.0.0"
+    }
+}

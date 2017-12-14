@@ -2,7 +2,7 @@
 
 A very simple chrome extension adding a context menu to the browser allowing to
 transfer the selected text including the current url of the page to
-[https://alpha.draaft.co](draaft.co).
+[https://beta.draaft.co](draaft.co).
 
 ## Installation
 

@@ -8,7 +8,38 @@
   -webkit-border-radius: 0;
   background-color: #808080;
 }
+
+html {
+  overflow-y: scroll;
+  min-height: 620px;
+}
+
 p { margin: 0; }
+
+#app-container {
+  min-width: 500px;
+}
+
+#import-container {
+  margin-top: 1rem;
+}
+
+.fields-wrapper {
+  font-size: 12px !important;
+}
+
+.segment {
+  overflow: hidden;
+}
+
+#input-element-content-field {
+  height: 120px !important;
+  margin-bottom: 80px !important;
+}
+
+.fields-wrapper .field div {
+  margin-bottom: 5px;
+}
 
 /* HEADER */
 .ui.header.logo-header {

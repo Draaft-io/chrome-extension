@@ -1,0 +1,14 @@
+{
+	"name": "scope.components.component-add",
+	"version": "0.0.1",
+	"homepage": "https://bitsrc.io/scope/components/component-add",
+	"main": "components/Components/ComponentAdd/ComponentAdd.js",
+	"dependencies": {
+		"prop-types": "^15.5.8",
+		"ramda": "0.21.0",
+		"react": "^16.0.0",
+		"semantic-ui-react": "^0.75.1"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"scripts": {}
+}

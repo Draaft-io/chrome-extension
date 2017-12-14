@@ -1,0 +1,11 @@
+{
+    "env": {
+        "compiler": "none",
+        "tester": "none"
+    },
+    "dependencies": {},
+    "packageDependencies": {
+        "graphql-tag": "^2.4.2",
+        "react-apollo": "^1.4.15"
+    }
+}

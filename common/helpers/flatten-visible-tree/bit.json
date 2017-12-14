@@ -1,0 +1,11 @@
+{
+    "env": {
+        "compiler": "none",
+        "tester": "none"
+    },
+    "dependencies": {},
+    "packageDependencies": {
+        "flatten-tree": "^0.0.3",
+        "ramda": "0.21.0"
+    }
+}

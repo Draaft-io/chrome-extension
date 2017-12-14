@@ -1,0 +1,230 @@
+/*@import "../../../static/styles/variables.less";*/
+
+:root {
+	--lightGrey: #DCDDDE;
+  --tertiaryColor: #808080;
+  --blue: #3376A4;
+  --primaryColor: #00C3FF;
+  --grey: #767676;
+  --white: #FFFFFF;
+}
+
+.rowWrapper,
+.nodeWrapper,
+.node {
+  height: 100% !important;
+  box-sizing: border-box !important;
+  color: --tertiaryColor !important;
+  padding-left: 10px !important;
+}
+
+.rowWrapper {
+  display: inline-block !important;
+}
+
+.row {
+  height: 100% !important;
+  white-space: nowrap !important;
+  display: flex !important;
+}
+
+.row:hover .rowToolbar {
+  display: flex !important;
+}
+
+.searchMatch .rowTitleWrapper {
+  box-shadow: 10px 0px 10px -9px --blue !important;
+}
+
+.rowTitle.active {
+  color: --primaryColor !important;
+}
+
+.row > * {
+  box-sizing: border-box !important;
+}
+
+.rowTitleWrapper {
+  width: 100% !important;
+  height: 100% !important;
+  display: -ms-flexbox !important;
+	display: -webkit-flex !important;
+	display: flex !important;
+  -ms-flex-align: center !important;
+  -webkit-align-items: center !important;
+  -webkit-box-align: center !important;
+  align-items: center !important;
+  cursor: pointer !important;
+  position: relative !important;
+}
+
+.rowLandingPad {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.rowLandingPad * {
+  opacity: 0 !important;
+}
+
+.rowLandingPad::before {
+  background-color: --lightGrey !important;
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  right: 80px !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  z-index: -1 !important;
+}
+
+.searchMatch .rowTitle {
+  font-weight: bold !important;
+  color: --blue !important;
+}
+
+.rowContents {
+  position: relative !important;
+  height: 100% !important;
+  width: 100% !important;
+  flex: 1 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding-right: 80px !important;
+}
+
+.rowLabel {
+  flex: 0 1 auto !important;
+  margin-right: 1rem !important;
+  overflow: hidden !important;
+  width: 100% !important;
+}
+
+.rowToolbar {
+  flex: 0 1 auto !important;
+  display: none !important;
+  position: absolute !important;
+  right: 0 !important;
+  height: 100% !important;
+  -ms-flex-align: center !important;
+	-webkit-align-items: center !important;
+	-webkit-box-align: center !important;
+	align-items: center !important;
+  width: 80px !important;
+  padding-left: 1rem !important;
+  color: --grey !important;
+}
+
+.editing .rowToolbar {
+  display: flex !important;
+}
+
+.editing .rowTitleWrapper {
+  cursor: initial !important;
+}
+
+.rowTitle {
+  font-weight: 400 !important;
+}
+
+.rowTitle h1,
+.rowTitle h2,
+.rowTitle h3,
+.rowTitle h4,
+.rowTitle h5,
+.rowTitle h6 {
+  font-size: 1em !important;
+}
+
+.rowTitle span {
+  white-space: nowrap !important;
+}
+
+.rowTitleWithSubtitle {
+  font-size: 85% !important;
+  display: block !important;
+  height: 0.8rem !important;
+}
+
+.rowSubtitle {
+  font-size: 70% !important;
+  line-height: 1 !important;
+}
+
+.collapseButton, .expandButton {
+  border: none !important;
+  position: absolute !important;
+  left: 1rem !important;
+  top: 3px !important;
+  cursor: pointer !important;
+  background: transparent !important;
+  font-family: icons !important;
+  display: inline-block !important;
+  padding: 0 !important;
+  width: 1.2rem !important;
+  text-align: left !important;
+}
+
+.collapseButton:after {
+  content: '\\f107';
+}
+
+.expandButton:after {
+  content: '\\f105';
+}
+
+.lineChildren {
+  height: 100% !important;
+  display: inline-block !important;
+  position: absolute !important;
+}
+
+.lineChildren::after {
+  content: '' !important;
+  position: absolute !important;
+  background-color: black !important;
+  width: 1px !important;
+  left: 50% !important;
+  bottom: 0 !important;
+  height: 10px !important;
+}
+
+.rowToolbar :global(.button):not(:first-child) {
+  padding-left:0.8rem !important;
+}
+
+.rowToolbar :global(.button) {
+  cursor: pointer !important;
+}
+
+.depth,
+.title {
+  display: inline-block !important;
+}
+
+.title {
+  width: 100% !important;
+}
+
+.depth {
+  padding-right: 0.5rem !important;
+  cursor: move !important;
+}
+
+.additionalCounter {
+  position: absolute !important;
+  top: 0 !important;
+  right: 1rem !important;
+  height: 100% !important;
+  background: --white !important;
+  padding-left: 1rem !important;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex !important;
+  -ms-flex-align: center !important;
+  -webkit-align-items: center !important;
+  -webkit-box-align: center !important;
+  align-items: center;
+}

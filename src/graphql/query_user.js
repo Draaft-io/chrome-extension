@@ -1,4 +1,4 @@
-import { gql, graphql  } from 'react-apollo'
+import { gql } from "react-apollo"
 
 export default gql`query {
   currentUser {

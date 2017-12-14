@@ -1,0 +1,17 @@
+{
+    "env": {
+        "compiler": "none",
+        "tester": "none"
+    },
+    "dependencies": {
+        "scope/components/component-add-section": "0.0.1",
+        "scope/components/component-add-document": "0.0.1",
+        "scope/helpers/get-document-array": "0.0.1"
+    },
+    "packageDependencies": {
+        "prop-types": "^15.5.8",
+        "ramda": "0.21.0",
+        "react": "^16.0.0",
+        "semantic-ui-react": "^0.75.1"
+    }
+}

@@ -1,0 +1,13 @@
+{
+	"name": "scope.graphql.update-element-tags",
+	"version": "0.0.1",
+	"homepage": "https://bitsrc.io/scope/graphql/update-element-tags",
+	"main": "graphql/mutations/updateElementTags.js",
+	"dependencies": {
+		"graphql-tag": "^2.4.2",
+		"ramda": "0.21.0",
+		"react-apollo": "^1.4.15"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"scripts": {}
+}

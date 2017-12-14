@@ -6,7 +6,9 @@ import App from "./components/App"
 
 const Index = () => (
   <ApolloProvider client={client}>
-    <App />
+    <div id="app-container">
+      <App />
+    </div>
   </ApolloProvider>
 )
 

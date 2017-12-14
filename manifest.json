@@ -1,19 +1,13 @@
 {
     "manifest_version": 2,
     "name": "Draaft Bookmarker",
-    "version": "0.3.3",
+    "version": "0.3.6",
 
     "description": "Save selected text to draaft.co",
 
     "author": "Jörg Hartmann",
 
-    "permissions": [ "contextMenus", "management", "activeTab" ],
-
-    "background": {
-        "scripts": [
-            "background.js"
-        ]
-    },
+    "permissions": [ "tabs", "management", "activeTab", "https://localhost" ],
 
     "browser_action": {
         "default_title": "Collect the Web",
@@ -33,6 +27,7 @@
                 "http://*/*",
                 "https://*/*"
             ],
+            "js": [ "./content_script.js" ],
             "css": [
                 "lib/style.css"
             ],

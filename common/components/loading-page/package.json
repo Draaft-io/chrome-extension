@@ -1,0 +1,14 @@
+{
+	"name": "scope.components.loading-page",
+	"version": "0.0.2",
+	"homepage": "https://bitsrc.io/scope/components/loading-page",
+	"main": "components/BaseComponents/LoadingPage/LoadingPage.js",
+	"dependencies": {
+		"prop-types": "^15.5.8",
+		"react": "^16.0.0",
+		"semantic-ui-react": "^0.75.1",
+		"styled-jsx": "^2.1.2"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"scripts": {}
+}

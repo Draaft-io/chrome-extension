@@ -17,10 +17,10 @@ const wsClient = new SubscriptionClient(`wss://${URL}/subscriptions`, {
 const networkInterfaceWithSubscriptions = addGraphQLSubscriptions(
   networkInterface,
   wsClient
-);
+)
 
 const client = new ApolloClient({
-  networkInterface: networkInterfaceWithSubscriptions
+  networkInterface: networkInterfaceWithSubscriptions,
 })
 
 export default client

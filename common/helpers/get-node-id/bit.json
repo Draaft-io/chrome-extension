@@ -1,0 +1,10 @@
+{
+    "env": {
+        "compiler": "none",
+        "tester": "none"
+    },
+    "dependencies": {},
+    "packageDependencies": {
+        "ramda": "0.21.0"
+    }
+}

@@ -1,12 +1,13 @@
 import PropTypes from "prop-types"
 import { compose } from "ramda"
 import React from "react"
-import { List, Header, Segment, Divider } from "semantic-ui-react"
+import { List, Header, Segment } from "semantic-ui-react"
 import LogoutForm from "./LogoutForm"
 import { removeElementMutation } from "../graphql/mutation_remove_component"
 import { URL } from "../config"
 
 function handleLinkClick(component) {
+  console.log("C", component)
   chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
     const tab = tabs[0]
     const domain = tab.url.split("/")[2]
@@ -28,7 +29,9 @@ class History extends React.Component {
   render() {
     return (
       <div className="flex">
-        <Header className="logo-header"><img src="../../images/draaft_logo_light.svg"/></Header>
+        <Header className="logo-header">
+          <img src="../../images/draaft_logo_light.svg" alt="logo" />
+        </Header>
         <Segment style={{ paddingBottom: "0" }}>
           <Header as="h2" textAlign="center">SAVE HISTORY</Header>
           <List divided>
@@ -40,10 +43,10 @@ class History extends React.Component {
                 </List.Content>
                 <List.Content className="actions">
                   <List.Icon link name="linkify" onClick={() => handleLinkClick(component)} />
-                  <List.Icon link name="trash" onClick={this.handleDeleteClick.bind(this, component._id)} />
+                  <List.Icon link name="trash" onClick={() => this.handleDeleteClick(component._id)} />
                 </List.Content>
               </List.Item>
-              ))}
+            ))}
           </List>
         </Segment>
         <Segment textAlign="center" style={{ paddingBottom: "1.5rem" }}>
@@ -66,6 +69,4 @@ History.propTypes = {
   }).isRequired,
 }
 
-export default compose(
-  removeElementMutation,
-)(History)
+export default compose(removeElementMutation)(History)

@@ -1,0 +1,13 @@
+{
+	"name": "scope.components.component-add-document",
+	"version": "0.0.1",
+	"homepage": "https://bitsrc.io/scope/components/component-add-document",
+	"main": "components/Components/ComponentAdd/ComponentAddDocument.js",
+	"dependencies": {
+		"prop-types": "^15.5.8",
+		"react": "^16.0.0",
+		"semantic-ui-react": "^0.75.1"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"scripts": {}
+}

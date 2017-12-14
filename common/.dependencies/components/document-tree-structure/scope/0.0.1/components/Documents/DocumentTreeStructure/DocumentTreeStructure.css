@@ -1,0 +1,23 @@
+/*@import "../../../static/styles/variables.less";*/
+
+.tree :global(.rst__lineBlock),
+.tree :global(.rst__absoluteLineBlock){
+  display: none !important;
+}
+
+.tree :global(.rst__nodeContent) {
+  right: 0px !important;
+  margin-left: -13px !important;
+}
+
+.tree :global(.ReactVirtualized__Grid.ReactVirtualized__List.rst__virtualScrollOverride) {
+  overflow: visible !important;
+}
+.tree :global(.ReactVirtualized__Grid.ReactVirtualized__List.rst__virtualScrollOverride) {
+  height: auto !important;
+}
+
+.tree > div {
+  min-height: 1rem;
+  height: auto !important;
+}

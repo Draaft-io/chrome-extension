@@ -1,0 +1,11 @@
+{
+	"name": "scope.helpers.document-to-structure",
+	"version": "0.0.1",
+	"homepage": "https://bitsrc.io/scope/helpers/document-to-structure",
+	"main": "lib/helpers/documentToStructure.js",
+	"dependencies": {
+		"array-to-tree": "^2.2.1"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"scripts": {}
+}

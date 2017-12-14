@@ -7,7 +7,9 @@ export const removeElement = gql`
   ) {
     removeElement(
       elementId: $elementId
-    )
+    ) {
+      _id
+    }
   }
 `
 

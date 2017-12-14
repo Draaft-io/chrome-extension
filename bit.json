@@ -1,0 +1,29 @@
+{
+    "env": {
+        "compiler": "none",
+        "tester": "none"
+    },
+    "dependencies": {
+        "scope/helpers/auto-numbered-sections": "0.0.2",
+        "scope/helpers/document-to-structure": "0.0.1",
+        "scope/helpers/extract-expand-mapping-structure": "0.0.1",
+        "scope/helpers/flatten-visible-tree": "0.0.1",
+        "scope/helpers/get-document-array": "0.0.1",
+        "scope/helpers/get-node-id": "0.0.1",
+        "scope/helpers/update-section-tree": "0.0.1",
+        "scope/components/loading-page": "0.0.2",
+        "scope/components/quill-editor": "0.0.3",
+        "scope/components/component-form": "0.0.1",
+        "scope/mutations/element-import": "0.0.1",
+        "scope/mutations/element-remove": "0.0.1",
+        "scope/mutations/set-show-import-success-screen": "0.0.1",
+        "scope/components/component-import-success": "0.0.1"
+    },
+    "structure": {
+        "components": "common/{namespace}/{name}",
+        "dependencies": "common/.dependencies"
+    },
+    "dist": {
+        "target": "dist"
+    }
+}

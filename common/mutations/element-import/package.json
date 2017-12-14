@@ -1,0 +1,12 @@
+{
+	"name": "scope.mutations.element-import",
+	"version": "0.0.1",
+	"homepage": "https://bitsrc.io/scope/mutations/element-import",
+	"main": "graphql/mutations/elementImport.js",
+	"dependencies": {
+		"graphql-tag": "^2.4.2",
+		"react-apollo": "^1.4.15"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"scripts": {}
+}

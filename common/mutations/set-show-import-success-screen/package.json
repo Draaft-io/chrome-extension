@@ -1,0 +1,12 @@
+{
+	"name": "scope.mutations.set-show-import-success-screen",
+	"version": "0.0.1",
+	"homepage": "https://bitsrc.io/scope/mutations/set-show-import-success-screen",
+	"main": "graphql/mutations/setShowImportSuccessScreen.js",
+	"dependencies": {
+		"graphql-tag": "^2.4.2",
+		"react-apollo": "^1.4.15"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"scripts": {}
+}

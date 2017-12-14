@@ -1,0 +1,18 @@
+{
+    "env": {
+        "compiler": "none",
+        "tester": "none"
+    },
+    "dependencies": {
+        "scope/components/quill-editor": "0.0.2",
+        "scope/components/component-add": "0.0.1",
+        "scope/components/component-tag-view": "0.0.1"
+    },
+    "packageDependencies": {
+        "prop-types": "^15.5.8",
+        "ramda": "0.21.0",
+        "react": "^16.0.0",
+        "semantic-ui-react": "^0.75.1",
+        "styled-jsx": "^2.1.2"
+    }
+}

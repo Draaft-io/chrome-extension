@@ -1,2 +1,2 @@
-export const URL = process.env.NODE_ENV === "production" ? "alpha.draaft.co" : "localhost"
+export const URL = process.env.NODE_ENV === "production" ? "beta.draaft.co" : "localhost"
 console.log({ URL })
