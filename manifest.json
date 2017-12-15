@@ -27,7 +27,9 @@
                 "http://*/*",
                 "https://*/*"
             ],
-            "js": [ "./content_script.js" ],
+            "js": [
+                "./dist/content.js"
+            ],
             "css": [
                 "lib/style.css"
             ],

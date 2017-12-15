@@ -1844,6 +1844,12 @@ doctrine@^2.0.0, doctrine@^2.0.2:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/dom-helpers/-/dom-helpers-3.2.1.tgz#3203e07fed217bd1f424b019735582fc37b2825a"
 
+dom-selection@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/dom-selection/-/dom-selection-0.3.3.tgz#a6b69d1ad456c92e39acec6c2ae2fac11be28b8a"
+  dependencies:
+    next-node "^1.0.3"
+
 domain-browser@^1.1.1:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/domain-browser/-/domain-browser-1.1.7.tgz#867aa4b093faa05f1de08c06f4d7b21fdf8698bc"
@@ -3445,6 +3451,10 @@ natural-compare@^1.4.0:
 nested-property@^0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/nested-property/-/nested-property-0.0.7.tgz#ff222f233ca8793c6828b4117091bea597130f4f"
+
+next-node@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/next-node/-/next-node-1.0.3.tgz#229348b326b6a1203515494fa6ae9a2b1db88ca6"
 
 node-fetch@^1.0.1:
   version "1.7.3"
