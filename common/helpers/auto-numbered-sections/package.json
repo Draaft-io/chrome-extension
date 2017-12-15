@@ -1,9 +1,0 @@
-{
-	"name": "scope.helpers.auto-numbered-sections",
-	"version": "0.0.2",
-	"homepage": "https://bitsrc.io/scope/helpers/auto-numbered-sections",
-	"main": "lib/helpers/autoNumberedSections.js",
-	"dependencies": {},
-	"license": "SEE LICENSE IN LICENSE",
-	"scripts": {}
-}

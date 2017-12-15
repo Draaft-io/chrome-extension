@@ -6,6 +6,7 @@ import QUERY_LOGGED_IN from "../graphql/query_user"
 import LoginForm from "./LoginForm"
 import History from "./History"
 import ImportContainer from "./ImportContainer"
+import LoadingPage from "../../common/components/loading-page/"
 
 function getData() {
   return new Promise((resolve, reject) => chrome.tabs.query(
@@ -40,12 +41,18 @@ class App extends React.Component {
   render() {
     const { data } = this.props
     const currentUserId = pathOr(undefined, [ "currentUser", "_id" ], data)
+
+    if (data && data.loading) {
+      return <LoadingPage />
+    }
+
     if (currentUserId) {
       if (this.state.selection && this.state.selection.length > 0) {
         return <ImportContainer selection={this.state.selection} url={this.state.url} />
       }
       return <History refetch={data.refetch} user={data.currentUser} />
     }
+
     return (
       <LoginForm refetch={data.refetch} />
     )

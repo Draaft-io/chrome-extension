@@ -41,34 +41,30 @@ class ComponentImportContainer extends React.Component {
         },
       })
     }).then((res) => {
-      if (this.props.data.currentUser.settings.showImportSuccessScreen) {
-        this.setState({
-          result: {
-            saved: true, success: true, elementId: res.data.elementImport._id, message: null,
-          },
-        })
-      } else {
-        // window.close()
-      }
+      this.setState({
+        result: {
+          saved: true, success: true, elementId: res.data.elementImport._id, message: null,
+        },
+      })
     })
   }
 
   render() {
     const loading = pathOr(null, [ "data", "loading" ], this.props)
-    const settings = pathOr(null, [ "data", "currentUser", "settings" ], this.props)
 
     // When still loading, show loading Page
     if (loading) {
       return <LoadingPage />
     }
 
-    if (this.state.result.saved && settings && settings.showImportSuccessScreen) {
+    if (this.state.result.saved) {
       return (
         <ComponentImportSuccess
           result={this.state.result}
           removeElement={this.props.removeElement}
           setShowImportSuccessScreen={this.props.setShowImportSuccessScreen}
           showImportSuccessScreen={this.props.data.currentUser.settings.showImportSuccessScreen}
+          closeTimeout={2 * 1000}
         />
       )
     }

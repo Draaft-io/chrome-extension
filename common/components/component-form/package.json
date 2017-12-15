@@ -1,6 +1,6 @@
 {
 	"name": "scope.components.component-form",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"homepage": "https://bitsrc.io/scope/components/component-form",
 	"main": "components/Components/ComponentForm/ComponentForm.js",
 	"dependencies": {

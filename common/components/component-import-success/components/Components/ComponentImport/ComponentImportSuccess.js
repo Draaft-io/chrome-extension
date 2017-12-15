@@ -10,10 +10,10 @@ export class ComponentImportSuccess extends React.Component {
   }
 
   componentDidMount() {
-    if (this.props.showImportSuccessScreen) {
+    if (this.props.closeTimeout > 0) {
       setTimeout(() => {
-        (window.opener || window.parent).postMessage({ method: "close" }, "*")
-      }, 3 * 1000)
+        window.close()
+      }, this.props.closeTimeout)
     }
   }
 
@@ -39,9 +39,14 @@ export class ComponentImportSuccess extends React.Component {
                 : <Button content="Cancel Saving" icon="undo" id="button-cancel" loading={this.state.removing === "removing"} onClick={this.handleCancelImport} primary />
               }
             </Form.Field>
-            <Form.Field>
-              <Checkbox id="checkbox-disable-message" label="Don't show this page again" onChange={() => setShowImportSuccessScreen({ value: false })} />
-            </Form.Field>
+            {this.props.showSetting
+              ? (
+                <Form.Field>
+                  <Checkbox id="checkbox-disable-message" label="Don't show this page again" onChange={() => setShowImportSuccessScreen({ value: false })} />
+                </Form.Field>
+              )
+              : null
+            }
           </Form>
         </Container>
       )
@@ -66,6 +71,8 @@ ComponentImportSuccess.propTypes = {
   showImportSuccessScreen: PropTypes.bool.isRequired,
   setShowImportSuccessScreen: PropTypes.func.isRequired,
   removeElement: PropTypes.func.isRequired,
+  showSetting: PropTypes.bool,
+  closeTimeout: PropTypes.number,
 }
 
 ComponentImportSuccess.defaultProps = {
@@ -73,4 +80,6 @@ ComponentImportSuccess.defaultProps = {
     message: "",
     success: false,
   },
+  showSetting: false,
+  closeTimeout: -1,
 }

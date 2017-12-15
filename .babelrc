@@ -5,7 +5,6 @@
     [ "module-resolver", {
       "root": [ "." ],
       "alias": {
-        "components/BaseComponents/QuillEditor/QuillEditor": "./common/components/quill-editor",
         "components": "./components"
       },
       "cwd": "babelrc"

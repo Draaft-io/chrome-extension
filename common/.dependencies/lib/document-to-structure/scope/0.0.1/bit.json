@@ -1,0 +1,12 @@
+{
+    "env": {
+        "compiler": "none",
+        "tester": "none"
+    },
+    "dependencies": {
+        "scope/lib/auto-numbered-sections": "0.0.1"
+    },
+    "packageDependencies": {
+        "array-to-tree": "^2.2.1"
+    }
+}

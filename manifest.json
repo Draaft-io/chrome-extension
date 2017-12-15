@@ -21,6 +21,8 @@
         "default_popup": "src/index.html"
     },
 
+    "background": { "scripts": [ "background.js" ] },
+
     "content_scripts": [
         {
             "matches": [

@@ -4,7 +4,7 @@
         "tester": "none"
     },
     "dependencies": {
-        "scope/graphql/update-element-tags": "0.0.1"
+        "scope/mutations/element-update-tags": "0.0.1"
     },
     "packageDependencies": {
         "prop-types": "^15.5.8",

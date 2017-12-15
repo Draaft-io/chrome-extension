@@ -4,12 +4,12 @@
         "tester": "none"
     },
     "dependencies": {
-        "scope/helpers/document-to-structure": "0.0.2",
-        "scope/helpers/flatten-visible-tree": "0.0.1",
-        "scope/helpers/get-node-id": "0.0.1",
+        "scope/lib/document-to-structure": "0.0.1",
+        "scope/lib/flatten-visible-tree": "0.0.1",
+        "scope/lib/get-node-id": "0.0.1",
         "scope/components/document-tree-node": "0.0.1",
-        "scope/helpers/extract-expand-mapping-structure": "0.0.1",
-        "scope/helpers/update-section-tree": "0.0.1"
+        "scope/lib/extract-expand-mapping-structure": "0.0.1",
+        "scope/lib/update-section-tree": "0.0.1"
     },
     "packageDependencies": {
         "ramda": "0.21.0",

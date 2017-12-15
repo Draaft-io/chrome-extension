@@ -1,0 +1,11 @@
+{
+	"name": "scope.lib.update-path",
+	"version": "0.0.1",
+	"homepage": "https://bitsrc.io/scope/lib/update-path",
+	"main": "lib/helpers/updatePath.js",
+	"dependencies": {
+		"ramda": "0.21.0"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"scripts": {}
+}
