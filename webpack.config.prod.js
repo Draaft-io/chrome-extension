@@ -4,9 +4,12 @@ const fs = require("fs")
 const trash = require("trash")
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: {
+    app: "./src/index.js",
+    content: "./content_script/content_script.js",
+  },
   output: {
-    filename: "bundle.js",
+    filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
   },
   module: {
