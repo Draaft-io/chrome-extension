@@ -6,7 +6,7 @@
 	"dependencies": {
 		"prop-types": "^15.5.8",
 		"react": "^16.0.0",
-		"semantic-ui-react": "^0.75.1",
+		"semantic-ui-react": "^0.77.1",
 		"react-dnd": "^2.5.3",
 		"styled-jsx": "^2.1.2",
 		"ramda": "0.21.0"

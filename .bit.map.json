@@ -323,9 +323,50 @@
                 "test": false
             }
         ],
-        "origin": "IMPORTED",
         "mainFile": "components/Components/ComponentImport/ComponentImportSuccess.js",
-        "rootDir": "common/components/component-import-success"
+        "rootDir": "common/components/component-import-success",
+        "origin": "IMPORTED"
+    },
+    "scope/components/account-login-facebook@0.0.1": {
+        "files": [
+            {
+                "name": "AccountLoginFacebook.js",
+                "relativePath": "components/Accounts/AccountLogin/AccountLoginFacebook.js",
+                "test": false
+            }
+        ],
+        "mainFile": "components/Accounts/AccountLogin/AccountLoginFacebook.js",
+        "rootDir": "common/components/account-login-facebook",
+        "origin": "IMPORTED"
+    },
+    "scope/components/account-login-google@0.0.1": {
+        "files": [
+            {
+                "name": "AccountLoginGoogle.js",
+                "relativePath": "components/Accounts/AccountLogin/AccountLoginGoogle.js",
+                "test": false
+            }
+        ],
+        "mainFile": "components/Accounts/AccountLogin/AccountLoginGoogle.js",
+        "rootDir": "common/components/account-login-google",
+        "origin": "IMPORTED"
+    },
+    "scope/components/account-login-password@0.0.3": {
+        "files": [
+            {
+                "name": "AccountLoginPassword.css",
+                "relativePath": "components/Accounts/AccountLogin/AccountLoginPassword.css",
+                "test": false
+            },
+            {
+                "name": "AccountLoginPassword.js",
+                "relativePath": "components/Accounts/AccountLogin/AccountLoginPassword.js",
+                "test": false
+            }
+        ],
+        "origin": "IMPORTED",
+        "mainFile": "components/Accounts/AccountLogin/AccountLoginPassword.js",
+        "rootDir": "common/components/account-login-password"
     },
     "version": "0.11.1"
 }

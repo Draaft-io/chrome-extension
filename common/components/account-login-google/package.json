@@ -1,0 +1,12 @@
+{
+	"name": "scope.components.account-login-google",
+	"version": "0.0.1",
+	"homepage": "https://bitsrc.io/scope/components/account-login-google",
+	"main": "components/Accounts/AccountLogin/AccountLoginGoogle.js",
+	"dependencies": {
+		"react": "^16.0.0",
+		"semantic-ui-react": "0.77.1"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"scripts": {}
+}

@@ -15,11 +15,14 @@ function getData() {
       chrome.tabs.sendMessage(
         tabs[0].id, { method: "getSelection" },
         (response) => {
-          const data = {
-            selection: response.data,
-            url: tabs[0].url,
+          if (response) {
+            const data = {
+              selection: response.data,
+              url: tabs[0].url,
+            }
+            resolve(data)
           }
-          resolve(data)
+          reject()
         }
       )
     }

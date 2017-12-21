@@ -9,7 +9,10 @@
         "scope/mutations/element-import": "0.0.1",
         "scope/mutations/element-remove": "0.0.1",
         "scope/mutations/set-show-import-success-screen": "0.0.1",
-        "scope/components/component-import-success": "0.0.5"
+        "scope/components/component-import-success": "0.0.5",
+        "scope/components/account-login-password": "0.0.3",
+        "scope/components/account-login-facebook": "0.0.1",
+        "scope/components/account-login-google": "0.0.1"
     },
     "structure": {
         "components": "common/{namespace}/{name}",

@@ -1,5 +1,5 @@
 import { ApolloClient, createNetworkInterface } from "react-apollo"
-import { SubscriptionClient, addGraphQLSubscriptions } from "subscriptions-transport-ws"
+// import { SubscriptionClient, addGraphQLSubscriptions } from "subscriptions-transport-ws"
 import { URL } from "../config"
 
 const networkInterface = createNetworkInterface({
@@ -8,19 +8,20 @@ const networkInterface = createNetworkInterface({
     credentials: "include",
   },
   batchInterval: 100,
+  agent: false,
 })
 
-const wsClient = new SubscriptionClient(`wss://${URL}/subscriptions`, {
-  reconnect: true,
-})
+// const wsClient = new SubscriptionClient(`wss://${URL}/subscriptions`, {
+//   reconnect: true,
+// })
 
-const networkInterfaceWithSubscriptions = addGraphQLSubscriptions(
-  networkInterface,
-  wsClient
-)
+// const networkInterfaceWithSubscriptions = addGraphQLSubscriptions(
+//   networkInterface,
+//   wsClient
+// )
 
 const client = new ApolloClient({
-  networkInterface: networkInterfaceWithSubscriptions,
+  networkInterface,
 })
 
 export default client

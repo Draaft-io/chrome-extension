@@ -1,0 +1,11 @@
+{
+    "env": {
+        "compiler": "none",
+        "tester": "none"
+    },
+    "dependencies": {},
+    "packageDependencies": {
+        "react": "^16.0.0",
+        "semantic-ui-react": "0.77.1"
+    }
+}
