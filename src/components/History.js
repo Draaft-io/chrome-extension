@@ -32,7 +32,7 @@ class History extends React.Component {
         <Header className="logo-header">
           <img src="../../images/draaft_logo_light.svg" alt="logo" />
         </Header>
-        <Segment style={{ paddingBottom: "0" }}>
+        <Segment style={{ paddingBottom: "0", overflowY: "scroll" }}>
           <Header as="h2" textAlign="center">SAVE HISTORY</Header>
           <List divided>
             {components.length === 0
@@ -54,7 +54,7 @@ class History extends React.Component {
           </List>
         </Segment>
         <Segment textAlign="center" style={{ paddingBottom: "1.5rem" }}>
-          <LogoutForm />
+          <LogoutForm refetch={this.props.refetch} />
         </Segment>
       </div>
     )

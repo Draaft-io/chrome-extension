@@ -95,3 +95,6 @@ h2.ui.header { font-size: 1rem; font-weight: normal; }
 .light { color: #808080; }
 .dark { color: #4D4D4D; }
 .primary { color: #00C3FF; }
+.ui.primary.button {
+  background-color: #00C3FF !important;
+}
