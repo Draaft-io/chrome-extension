@@ -2,6 +2,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Checkbox, Button, Form, Header, Container, Message, Icon } from "semantic-ui-react"
 
+/**
+ * Displays Component Import Response
+ * @type {Object}
+ */
+
 export class ComponentImportSuccess extends React.Component {
   constructor(props) {
     super(props)

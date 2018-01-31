@@ -1,12 +1,12 @@
 {
 	"name": "scope.components.component-import-success",
-	"version": "0.0.5",
+	"version": "0.0.9",
 	"homepage": "https://bitsrc.io/scope/components/component-import-success",
 	"main": "components/Components/ComponentImport/ComponentImportSuccess.js",
 	"dependencies": {
 		"prop-types": "^15.5.8",
-		"react": "^16.0.0",
-		"semantic-ui-react": "^0.75.1"
+		"react": "^16.2.0",
+		"semantic-ui-react": "0.77.1"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"scripts": {}

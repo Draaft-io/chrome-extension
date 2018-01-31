@@ -1,24 +1,25 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { compose, equals, contains, uniq, propEq, propOr, pluck, remove, prop, flatten, map, update, head, filter, pathOr } from "ramda"
+import _JSXStyle from "styled-jsx/style"
 import { Form, Dropdown, Icon, Input } from "semantic-ui-react"
 import QuillEditor from "../../BaseComponents/QuillEditor/QuillEditor"
-import _JSXStyle from "styled-jsx/style"
 import ComponentAdd from "../ComponentAdd/ComponentAdd"
 import ComponentTagView from "../ComponentTagView/ComponentTagView"
 import { stylesheet, classNames } from "./ComponentForm.css"
 
 /**
- * Component Form for Creating and Editing Components
+ * Component Form for Creating & Editing Components
  * - handles its own state
  * - provides hooks for updating single fields
  * - when createComponent is provided, it shows a Save button
  */
+
+ 
 class ComponentForm extends React.Component {
   constructor(props) {
     super(props)
     const projects = map(pr => ({ value: pr._id, text: pr.title }))(pathOr([], [ "projects" ], this.props))
-
     this.state = {
       form: {
         title: pathOr("", [ "element", "title" ], props),
@@ -135,6 +136,7 @@ class ComponentForm extends React.Component {
               elementIds={[ this.props.element._id ]}
               existingTags={this.state.form.tags}
               onChange={tags => this.setState({ form: { ...this.state.form, tags } })}
+              stateOnly={this.props.stateOnly}
               tags={pathOr([], [ "project", "tags" ], this.props)}
             />
           </Form.Field>
@@ -144,6 +146,7 @@ class ComponentForm extends React.Component {
                 <div>PROJECT</div>
                 <Dropdown
                   allowAdditions
+                  disabled={this.props.disableProject}
                   fluid
                   id="select-project"
                   onAddItem={(ev, { value }) => this.setState({ projects: [ ...this.state.projects, { value, text: value }] })}
@@ -196,7 +199,7 @@ ComponentForm.propTypes = {
     })),
   }),
   element: PropTypes.shape({
-    _id: PropTypes.string.isRequired,
+    _id: PropTypes.string,
     documents: PropTypes.array,
     title: PropTypes.string,
     url: PropTypes.string,
@@ -218,6 +221,8 @@ ComponentForm.propTypes = {
   updateURL: PropTypes.func,
   updateTitle: PropTypes.func,
   updateContent: PropTypes.func,
+  stateOnly: PropTypes.bool,
+  disableProject: PropTypes.bool,
 }
 
 ComponentForm.defaultProps = {
@@ -231,6 +236,8 @@ ComponentForm.defaultProps = {
   updateURL: () => null,
   updateTitle: () => null,
   updateContent: () => null,
+  stateOnly: false,
+  disableProject: false,
 }
 
 export default ComponentForm

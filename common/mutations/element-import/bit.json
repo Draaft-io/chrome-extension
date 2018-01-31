@@ -6,6 +6,7 @@
     "dependencies": {},
     "packageDependencies": {
         "graphql-tag": "^2.4.2",
+        "ramda": "0.21.0",
         "react-apollo": "^1.4.15"
     }
 }

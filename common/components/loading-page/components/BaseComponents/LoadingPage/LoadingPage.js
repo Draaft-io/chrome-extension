@@ -4,6 +4,11 @@ import { Grid, Header, Icon, List, Modal } from "semantic-ui-react"
 import _JSXStyle from "styled-jsx/style"
 import { stylesheet, classNames } from "./LoadingPage.css"
 
+/**
+ * Loading Page
+ * @param {[type]} errors [description]
+ */
+
 const LoadingPage = ({ errors }) => (
   <Modal basic dimmer="inverted" open>
     <Modal.Content>

@@ -1,10 +1,10 @@
 {
 	"name": "scope.components.account-login-facebook",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"homepage": "https://bitsrc.io/scope/components/account-login-facebook",
 	"main": "components/Accounts/AccountLogin/AccountLoginFacebook.js",
 	"dependencies": {
-		"react": "^16.0.0",
+		"react": "^16.2.0",
 		"semantic-ui-react": "0.77.1"
 	},
 	"license": "SEE LICENSE IN LICENSE",

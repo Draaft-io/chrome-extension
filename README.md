@@ -33,3 +33,8 @@ This feature is only available from the chrome extension
 * [unzip]
 * open [chrome extension page](chrome://extensions/)
 * click on load unpacked extension ([more details here](https://developer.chrome.com/extensions/getstarted#unpacked))
+
+## Bit
+bit remote add ssh://root@localhost:3333:/tmp/scope -g 
+
+bit import --force scope/components/component-form
