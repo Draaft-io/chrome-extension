@@ -29,11 +29,12 @@ class History extends React.Component {
     const components = pathOr([], [ "user", "components" ], this.props)
     return (
       <div className="flex">
-        <Header className="logo-header">
+        {/* <Header className="logo-header">
           <img src="../../images/draaft_logo_light.svg" alt="logo" />
-        </Header>
+    </Header> */}
         <Segment style={{ paddingBottom: "0", overflowY: "scroll" }}>
           <Header as="h2" textAlign="center">SAVE HISTORY</Header>
+          <a onClick={() => this.props.changePage("importForm")} style={{ position: "absolute", right: "1rem", top: "12px", cursor: "pointer", zIndex: 1000000, fontSize: 12 }}>IMPORT</a>          
           <List divided>
             {components.length === 0
               ? <Header as="h2" icon textAlign="center">No Components imported yet</Header>
@@ -63,6 +64,7 @@ class History extends React.Component {
 
 History.displayName = "History"
 History.propTypes = {
+  changePage: PropTypes.func.isRequired,
   refetch: PropTypes.func.isRequired,
   removeElement: PropTypes.func.isRequired,
   user: PropTypes.shape({

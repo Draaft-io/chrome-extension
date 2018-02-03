@@ -1,6 +1,6 @@
 {
 	"name": "scope.components.component-import-success",
-	"version": "0.0.9",
+	"version": "0.0.1",
 	"homepage": "https://bitsrc.io/scope/components/component-import-success",
 	"main": "components/Components/ComponentImport/ComponentImportSuccess.js",
 	"dependencies": {

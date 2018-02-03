@@ -9,12 +9,16 @@
   --white: #FFFFFF;
 }
 
+.active {
+  color: #3376A4;
+}
+
 .rowWrapper,
 .nodeWrapper,
 .node {
   height: 100% !important;
   box-sizing: border-box !important;
-  color: --tertiaryColor !important;
+  color: #808080 !important;
   padding-left: 10px !important;
 }
 
@@ -33,11 +37,7 @@
 }
 
 .searchMatch .rowTitleWrapper {
-  box-shadow: 10px 0px 10px -9px --blue !important;
-}
-
-.rowTitle.active {
-  color: --primaryColor !important;
+  box-shadow: 10px 0px 10px -9px #3376A4 !important;
 }
 
 .row > * {
@@ -69,7 +69,7 @@
 }
 
 .rowLandingPad::before {
-  background-color: --lightGrey !important;
+  background-color: #DCDDDE !important;
   content: '' !important;
   position: absolute !important;
   top: 0 !important;
@@ -81,7 +81,7 @@
 
 .searchMatch .rowTitle {
   font-weight: bold !important;
-  color: --blue !important;
+  color: #3376A4 !important;
 }
 
 .rowContents {
@@ -114,7 +114,7 @@
 	align-items: center !important;
   width: 80px !important;
   padding-left: 1rem !important;
-  color: --grey !important;
+  color: --#767676 !important;
 }
 
 .editing .rowToolbar {
@@ -218,7 +218,7 @@
   top: 0 !important;
   right: 1rem !important;
   height: 100% !important;
-  background: --white !important;
+  background: white !important;
   padding-left: 1rem !important;
   display: -ms-flexbox;
   display: -webkit-flex;

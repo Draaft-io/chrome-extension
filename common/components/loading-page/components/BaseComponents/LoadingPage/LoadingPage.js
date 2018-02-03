@@ -8,7 +8,6 @@ import { stylesheet, classNames } from "./LoadingPage.css"
  * Loading Page
  * @param {[type]} errors [description]
  */
-
 const LoadingPage = ({ errors }) => (
   <Modal basic dimmer="inverted" open>
     <Modal.Content>

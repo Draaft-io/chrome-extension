@@ -14,8 +14,6 @@ import { stylesheet, classNames } from "./ComponentForm.css"
  * - provides hooks for updating single fields
  * - when createComponent is provided, it shows a Save button
  */
-
- 
 class ComponentForm extends React.Component {
   constructor(props) {
     super(props)
@@ -39,6 +37,15 @@ class ComponentForm extends React.Component {
     this.handleUpdateContent = this.handleUpdateContent.bind(this)
     this.handleUpdateURL = this.handleUpdateURL.bind(this)
     this.getDocuments = this.getDocuments.bind(this)
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      form: {
+        ...this.state.form,
+        selectionArray: uniq(nextProps.selectionArray) || [],
+      },
+    })
   }
 
   getDocuments() {
@@ -173,6 +180,7 @@ class ComponentForm extends React.Component {
               selectedDocuments={[]}
               selectedElementIds={this.props.selectedElementIds}
               selectionArray={this.state.form.selectionArray}
+              restoreSelection={this.props.restoreSelection}
             />
           </Form.Field>
           {this.props.createComponent
@@ -223,6 +231,7 @@ ComponentForm.propTypes = {
   updateContent: PropTypes.func,
   stateOnly: PropTypes.bool,
   disableProject: PropTypes.bool,
+  restoreSelection: PropTypes.func,  
 }
 
 ComponentForm.defaultProps = {
@@ -238,6 +247,7 @@ ComponentForm.defaultProps = {
   updateContent: () => null,
   stateOnly: false,
   disableProject: false,
+  restoreSelection: null,
 }
 
 export default ComponentForm

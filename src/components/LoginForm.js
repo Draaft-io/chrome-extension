@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Header, Segment, Divider } from "semantic-ui-react"
+import { Header, Form, Button, Segment, Divider } from "semantic-ui-react"
 import { URL } from "../config"
 import AccountLoginPassword from "../../common/components/account-login-password"
 
@@ -40,6 +40,12 @@ export default class LoginForm extends React.Component {
         </Header>
         <Segment>
           <AccountLoginPassword loading={this.state.loading} login={this.login} message={this.state.message} error={this.state.error} />
+          <Form style={{ marginTop: "1rem" }}>
+            <Form.Field basic className="button-login-google" content="Login with Google" control={Button} fluid icon="google" onClick={() => chrome.tabs.create({ url: "https://localhost/auth/google" })} />
+          </Form>
+          <Form style={{ marginTop: "1rem" }}>
+            <Form.Field basic className="button-login-facebook" content="Login with Facebook" control={Button} fluid icon="facebook" onClick={() => chrome.tabs.create({ url: "https://localhost/auth/facebook" })} />
+          </Form>
         </Segment>
         <Divider />
         <Segment textAlign="center" style={{ paddingBottom: "1.5rem" }}>

@@ -1,6 +1,6 @@
 {
 	"name": "scope.components.account-login-password",
-	"version": "0.0.4",
+	"version": "0.0.1",
 	"homepage": "https://bitsrc.io/scope/components/account-login-password",
 	"main": "components/Accounts/AccountLogin/AccountLoginPassword.js",
 	"dependencies": {

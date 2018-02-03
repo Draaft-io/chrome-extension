@@ -12,7 +12,7 @@ class TreeDnDBox extends React.Component {
       <div className={`drop-box ${classNames.box} ${isActive ? `${classNames.isActive} drop-box-active` : ""} ${!isActive && canDrop ? `${classNames.canDrop} drop-box-can-drop` : ""}`}>
         <div className={`${classNames.bin}`}>
           {isActive
-            ? "Release to drop"
+            ? null
             : "Drag a box here"
           }
         </div>

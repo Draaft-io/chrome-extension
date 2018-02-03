@@ -20,13 +20,22 @@ class ComponentImportContainer extends React.Component {
       result: {
         saved: false, elementId: null, message: null, success: false,
       },
+      selectionArray: null,
     }
+
     this.save = this.save.bind(this)
+    this.restoreSelection = this.restoreSelection.bind(this)
   }
 
   save(ev, form) {
     ev.preventDefault()
+
+    // Get Selection
     const importSections = map(item => ({ documentId: item.documentId, sectionId: item.sectionId }))(form.selectionArray)
+
+    // Save selectionArray to Chrome Storage
+    chrome.storage.sync.set({ selectionArray: form.selectionArray })
+
     this.props.elementImport({
       projectId: form.project,
       selectionArray: importSections,
@@ -49,6 +58,14 @@ class ComponentImportContainer extends React.Component {
     })
   }
 
+  restoreSelection() {
+    chrome.storage.sync.get("selectionArray", ({ selectionArray }) => {
+      if (Array.isArray(selectionArray) && selectionArray.length > 0) {
+        this.setState({ selectionArray })
+      }
+    })
+  }
+
   render() {
     const loading = pathOr(null, [ "data", "loading" ], this.props)
 
@@ -58,14 +75,17 @@ class ComponentImportContainer extends React.Component {
     }
 
     if (this.state.result.saved) {
+      console.log("SSS", this.state.result)
       return (
-        <ComponentImportSuccess
-          result={this.state.result}
-          removeElement={this.props.removeElement}
-          setShowImportSuccessScreen={this.props.setShowImportSuccessScreen}
-          showImportSuccessScreen={this.props.data.currentUser.settings.showImportSuccessScreen}
-          closeTimeout={2 * 1000}
-        />
+        <div style={{ marginTop: "12rem" }}>
+          <ComponentImportSuccess
+            result={this.state.result}
+            removeElement={this.props.removeElement}
+            setShowImportSuccessScreen={this.props.setShowImportSuccessScreen}
+            showImportSuccessScreen={this.props.data.currentUser.settings.showImportSuccessScreen}
+            closeTimeout={2 * 1000}
+          />
+        </div>
       )
     }
 
@@ -77,12 +97,18 @@ class ComponentImportContainer extends React.Component {
         content: this.props.selection,
       },
     }
+
+    const selectionArray = pathOr([], [ "selectionArray" ], this.state)
+
     return (
       <Container id="import-container">
+        <a onClick={() => this.props.changePage("history")} style={{ position: "absolute", right: "1rem", top: "12px", fontSize: 12, cursor: "pointer", zIndex: 1000000 }}>HISTORY</a>
         <ComponentForm
           element={element}
           projects={projects}
           createComponent={this.save}
+          restoreSelection={this.restoreSelection}
+          selectionArray={selectionArray}
         />
       </Container>
     )
@@ -91,6 +117,7 @@ class ComponentImportContainer extends React.Component {
 
 ComponentImportContainer.displayName = "ComponentImportContainer"
 ComponentImportContainer.propTypes = {
+  changePage: PropTypes.func.isRequired,
   elementImport: PropTypes.func.isRequired,
   setShowImportSuccessScreen: PropTypes.func.isRequired,
   removeElement: PropTypes.func.isRequired,

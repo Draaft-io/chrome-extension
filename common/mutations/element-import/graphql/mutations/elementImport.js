@@ -2,7 +2,6 @@ import gql from "graphql-tag"
 import { graphql } from "react-apollo"
 import { assocPath, contains, compose, filter, propEq, prop, map, pluck, pathOr } from "ramda"
 
-
 export const elementImport = gql`
   mutation elementImport(
     $title: String

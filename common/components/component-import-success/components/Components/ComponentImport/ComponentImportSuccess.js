@@ -6,7 +6,6 @@ import { Checkbox, Button, Form, Header, Container, Message, Icon } from "semant
  * Displays Component Import Response
  * @type {Object}
  */
-
 export class ComponentImportSuccess extends React.Component {
   constructor(props) {
     super(props)

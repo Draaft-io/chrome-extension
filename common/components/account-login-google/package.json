@@ -1,6 +1,6 @@
 {
 	"name": "scope.components.account-login-google",
-	"version": "0.0.2",
+	"version": "0.0.1",
 	"homepage": "https://bitsrc.io/scope/components/account-login-google",
 	"main": "components/Accounts/AccountLogin/AccountLoginGoogle.js",
 	"dependencies": {

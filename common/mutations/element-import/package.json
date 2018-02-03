@@ -1,6 +1,6 @@
 {
 	"name": "scope.mutations.element-import",
-	"version": "0.0.3",
+	"version": "0.0.1",
 	"homepage": "https://bitsrc.io/scope/mutations/element-import",
 	"main": "graphql/mutations/elementImport.js",
 	"dependencies": {

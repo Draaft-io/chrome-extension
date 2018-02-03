@@ -27,7 +27,7 @@
 .box .bin {
 	width: 100% !important;
   height: 100% !important;
-  background-color: --lightGrey !important;
+  background-color: #DCDDDE !important;
   text-align: center !important;
   display: -ms-flexbox !important;
 	display: -webkit-flex !important;

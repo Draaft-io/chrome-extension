@@ -1,6 +1,6 @@
 {
 	"name": "scope.components.quill-editor",
-	"version": "0.0.2",
+	"version": "0.0.1",
 	"homepage": "https://bitsrc.io/scope/components/quill-editor",
 	"main": "components/BaseComponents/QuillEditor/QuillEditor.js",
 	"dependencies": {

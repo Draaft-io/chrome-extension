@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { contains } from "ramda"
+import { contains, head } from "ramda"
 import _JSXStyle from "styled-jsx/style"
 import TreeDnDBox from "./DocumentTreeNodeDnD"
 import TreeInput from "./DocumentTreeInput"
@@ -27,7 +27,7 @@ class DocumentTreeNode extends React.Component {
 
   // Update the state when props change
   componentWillReceiveProps(nextProps) {
-    this.setState({ active: contains(nextProps.node._id, nextProps.selectedSection) })
+    this.setState({ active: contains(nextProps.node._id, nextProps.openedSection) })
     this.setState({ editing: nextProps.editedSection === nextProps.node._id })
   }
 
@@ -47,7 +47,18 @@ class DocumentTreeNode extends React.Component {
   // reset any edited sections to view mode (automatically in redux action)
   handleSectionClick(ev) {
     ev.preventDefault()
-    this.props.selectSection({ value: this.props.node._id, ctrl: this.props.KEY_CTRL })
+    if (this.props.openedSection[0] === this.props.node._id && this.props.selectedSection[0] !== this.props.node._id) {
+      // If opened section is not the one used for showing components -> reselect section and document
+      this.props.selectDocument({ value: this.props.openedDocument })
+      this.props.selectSection({ value: this.props.node._id, ctrl: this.props.KEY_CTRL })
+    } else if (this.props.openedSection[0] === this.props.node._id && this.props.selectedSection[0] === this.props.node._id) {
+      // If opened section and selected section are the current node -> unselect
+      this.props.selectSection({ value: null })
+      this.props.openSection({ value: null })
+    } else {
+      this.props.selectSection({ value: this.props.node._id, ctrl: this.props.KEY_CTRL })
+      this.props.openSection({ value: this.props.node._id })
+    }
   }
 
   // Double clicks on a section trigger the edit mode
@@ -99,7 +110,7 @@ class DocumentTreeNode extends React.Component {
               <div className={`${classNames.rowContents} row-content`}>
                 <div className={classNames.rowTitleWrapper}>
                   <div className={classNames.rowLabel}>
-                    <div className={`${classNames.rowTitle} ${this.state.active ? classNames.active : ""}`}>
+                    <div className={`${classNames.rowTitle}`}>
                       {this.handle()}
                       <div className={`${classNames.title} section-title`}>
                         {this.state.editing && this.props.editable
@@ -119,7 +130,7 @@ class DocumentTreeNode extends React.Component {
                               onClick={this.handleSectionClick}
                               onDoubleClick={() => this.handleSectionDoubleClick()}
                             >
-                              <div key={Math.random()}>{node.title} </div>
+                              <div className={`section-title-content ${this.state.active ? `active ${classNames.active}` : ""}`} key={Math.random()}>{node.title} </div>
                             </span>
                           )}
                         <TreeDnDBox documentId={doc._id} sectionId={node._id} />
@@ -162,6 +173,10 @@ DocumentTreeNode.propTypes = {
   scaffoldBlockPxWidth: PropTypes.number.isRequired,
   selectedSection: PropTypes.array,
   selectSection: PropTypes.func,
+  openedSection: PropTypes.array,
+  openedDocument: PropTypes.string,
+  selectDocument: PropTypes.func,
+  openSection: PropTypes.func,
   style: PropTypes.object,
   toggleChildrenVisibility: PropTypes.func,
   treeIndex: PropTypes.number.isRequired,

@@ -5,7 +5,7 @@ import updatePath from "../../lib/helpers/updatePath"
 
 export const updateElementTags = gql`
   mutation updateElementTags(
-    $elementIds: [ String ]
+    $elementIds: [ String ]!
     $tags: [ String ]
     $add: Boolean
   ) {

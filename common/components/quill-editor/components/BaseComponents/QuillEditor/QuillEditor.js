@@ -32,6 +32,7 @@ class QuillEditor extends React.Component {
   handleChange(value) {
     this.setState({ text: value })
     this.props.onChange(value)
+    this.props.onBlur(this.state.text)
   }
 
   handleBlur() {
