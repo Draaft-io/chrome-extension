@@ -13,7 +13,7 @@
         "scope/components/account-login-password": "0.0.1",
         "scope/components/account-login-facebook": "0.0.1",
         "scope/components/account-login-google": "0.0.1",
-        "scope/components/component-form": "0.0.7",
+        "scope/components/component-form": "0.0.9",
         "scope/components/component-add": "0.0.3"
     },
     "structure": {

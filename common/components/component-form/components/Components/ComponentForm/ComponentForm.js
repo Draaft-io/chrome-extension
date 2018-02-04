@@ -25,7 +25,7 @@ class ComponentForm extends React.Component {
         url: pathOr("", [ "element", "url" ], props),
         tags: compose(pluck("_id"), pathOr([], [ "element", "tags" ]))(props),
         selectionArray: uniq(props.selectionArray) || [],
-        project: compose(propOr(null, "value"), head)(projects),
+        project: props.selectedProject || compose(propOr(null, "value"), head)(projects),
       },
       projects,
     }
@@ -44,6 +44,7 @@ class ComponentForm extends React.Component {
       form: {
         ...this.state.form,
         selectionArray: uniq(nextProps.selectionArray) || [],
+        project: nextProps.selectedProject || this.state.form.project,
       },
     })
   }
@@ -226,6 +227,7 @@ ComponentForm.propTypes = {
   })),
   deleteComponent: PropTypes.func,
   selectedElementIds: PropTypes.arrayOf(PropTypes.string),
+  selectedProject: PropTypes.string,
   updateURL: PropTypes.func,
   updateTitle: PropTypes.func,
   updateContent: PropTypes.func,
@@ -241,6 +243,7 @@ ComponentForm.defaultProps = {
   selectionArray: [],
   element: { documents: [] },
   selectedElementIds: [],
+  selectedProject: null,
   deleteComponent: null,
   updateURL: () => null,
   updateTitle: () => null,

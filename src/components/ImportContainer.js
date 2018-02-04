@@ -21,6 +21,7 @@ class ComponentImportContainer extends React.Component {
         saved: false, elementId: null, message: null, success: false,
       },
       selectionArray: null,
+      projectId: null,
     }
 
     this.save = this.save.bind(this)
@@ -35,6 +36,7 @@ class ComponentImportContainer extends React.Component {
 
     // Save selectionArray to Chrome Storage
     chrome.storage.sync.set({ selectionArray: form.selectionArray })
+    chrome.storage.sync.set({ projectId: form.project })
 
     this.props.elementImport({
       projectId: form.project,
@@ -64,11 +66,14 @@ class ComponentImportContainer extends React.Component {
         this.setState({ selectionArray })
       }
     })
+    chrome.storage.sync.get("projectId", ({ projectId }) => {
+      this.setState({ projectId })
+    })
   }
 
   render() {
     const loading = pathOr(null, [ "data", "loading" ], this.props)
-
+    console.log(this.state)
     // When still loading, show loading Page
     if (loading) {
       return <LoadingPage />
@@ -109,6 +114,7 @@ class ComponentImportContainer extends React.Component {
           createComponent={this.save}
           restoreSelection={this.restoreSelection}
           selectionArray={selectionArray}
+          selectedProject={this.state.projectId}
         />
       </Container>
     )

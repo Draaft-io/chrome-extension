@@ -426,7 +426,34 @@
         "rootDir": "common/.dependencies/components/component-add/scope/0.0.5",
         "origin": "NESTED"
     },
-    "scope/components/component-form@0.0.7": {
+    "scope/components/component-add@0.0.6": {
+        "files": [
+            {
+                "name": "ComponendAddSection.js",
+                "relativePath": "components/Components/ComponentAdd/ComponendAddSection.js",
+                "test": false
+            },
+            {
+                "name": "ComponentAddDocument.css",
+                "relativePath": "components/Components/ComponentAdd/ComponentAddDocument.css",
+                "test": false
+            },
+            {
+                "name": "ComponentAddDocument.js",
+                "relativePath": "components/Components/ComponentAdd/ComponentAddDocument.js",
+                "test": false
+            },
+            {
+                "name": "ComponentAdd.js",
+                "relativePath": "components/Components/ComponentAdd/ComponentAdd.js",
+                "test": false
+            }
+        ],
+        "mainFile": "components/Components/ComponentAdd/ComponentAdd.js",
+        "rootDir": "common/.dependencies/components/component-add/scope/0.0.6",
+        "origin": "NESTED"
+    },
+    "scope/components/component-form@0.0.9": {
         "files": [
             {
                 "name": "ComponentForm.css",
@@ -452,38 +479,11 @@
             "scope/lib/extract-expand-mapping-structure@0.0.1",
             "scope/lib/update-section-tree@0.0.1",
             "scope/components/document-tree-structure@0.0.1",
+            "scope/components/component-add@0.0.6",
             "scope/lib/update-path@0.0.1",
             "scope/mutations/element-update-tags@0.0.1",
-            "scope/components/component-tag-view@0.0.1",
-            "scope/components/component-add@0.0.6"
+            "scope/components/component-tag-view@0.0.1"
         ]
-    },
-    "scope/components/component-add@0.0.6": {
-        "files": [
-            {
-                "name": "ComponendAddSection.js",
-                "relativePath": "components/Components/ComponentAdd/ComponendAddSection.js",
-                "test": false
-            },
-            {
-                "name": "ComponentAddDocument.css",
-                "relativePath": "components/Components/ComponentAdd/ComponentAddDocument.css",
-                "test": false
-            },
-            {
-                "name": "ComponentAddDocument.js",
-                "relativePath": "components/Components/ComponentAdd/ComponentAddDocument.js",
-                "test": false
-            },
-            {
-                "name": "ComponentAdd.js",
-                "relativePath": "components/Components/ComponentAdd/ComponentAdd.js",
-                "test": false
-            }
-        ],
-        "origin": "NESTED",
-        "mainFile": "components/Components/ComponentAdd/ComponentAdd.js",
-        "rootDir": "common/.dependencies/components/component-add/scope/0.0.6"
     },
     "version": "0.11.1"
 }
